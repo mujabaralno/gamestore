@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider, RedirectToSignIn } from "@clerk/nextjs";
+import { dark, neobrutalism, shadesOfPurple } from '@clerk/themes';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +12,24 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider
+    appearance={{
+      baseTheme: [dark],
+      variables: { colorPrimary: '#f5f5f5' },
+      signIn: { 
+        baseTheme: [dark], 
+        variables: { colorPrimary: '#f5f5f5' }
+      },
+      layout: {
+        socialButtonsPlacement: 'bottom',
+        socialButtonsVariant: 'iconButton',
+        termsPageUrl: 'https://clerk.com/terms'
+      }
+    }}
+    >
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
