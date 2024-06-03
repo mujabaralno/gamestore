@@ -69,65 +69,75 @@ export default function Home() {
 
         {games.slice(5, 7).map((game, i) => {
           return (
+            <Link key={i} href={`/games/${game.id}`}>
             <Card
-              key={i}
               title={game.title}
               img={game.thumbnail}
               desc={game.short_description}
               realese={game.release_date}
               genre={game.genre}
+              route={game.id}
             />
+          </Link>
           );
         })}
 
         {games.slice(27, 28).map((game, i) => {
           return (
+            <Link key={i} href={`/games/${game.id}`}>
             <Card
-              key={i}
               title={game.title}
               img={game.thumbnail}
               desc={game.short_description}
               realese={game.release_date}
               genre={game.genre}
+              route={game.id}
             />
+          </Link>
           );
         })}
 
         {games.slice(113, 116).map((game, i) => {
           return (
+            <Link key={i} href={`/games/${game.id}`}>
             <Card
-              key={i}
               title={game.title}
               img={game.thumbnail}
               desc={game.short_description}
               realese={game.release_date}
               genre={game.genre}
+              route={game.id}
             />
+          </Link>
           );
         })}
 
         {games.slice(290, 291).map((game, i) => {
           return (
+            <Link key={i} href={`/games/${game.id}`}>
             <Card
-              key={i}
               title={game.title}
               img={game.thumbnail}
               desc={game.short_description}
               realese={game.release_date}
               genre={game.genre}
+              route={game.id}
             />
+          </Link>
           );
         })}
         {games.slice(0, 2).map((game, i) => {
           return (
+            <Link key={i} href={`/games/${game.id}`}>
             <Card
-              key={i}
               title={game.title}
               img={game.thumbnail}
               desc={game.short_description}
               realese={game.release_date}
               genre={game.genre}
+              route={game.id}
             />
+          </Link>
           );
         })}
       </div>
