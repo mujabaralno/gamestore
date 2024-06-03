@@ -6,7 +6,7 @@ import { socialsLinks } from "@/constants";
 const Footer = () => {
   return (
     <footer className="w-full relative mt-14 bg-[#1f1e1e]">
-      <div className="wrapper justify-between flex items-center p-6">
+      <div className="wrapper md:justify-between flex flex-col justify-center gap-5 items-center p-6">
         <Link href="/" className="sidebar-logo">
           <Image src="/ogame.png" alt="GameStore" width={150} height={100} />
         </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
           })}
         </ul>
       </div>
-      <div className=" border-gray-600 w-[57rem] border-t sm:mx-auto dark:border-gray-700 p-8">
+      <div className=" border-gray-600 md:w-[57rem] w-full border-t sm:mx-auto dark:border-gray-700 p-8">
         <p className="p-16-medium text-[#f5f5f5] text-center">
           © O Games™. All Rights Reserved.
         </p>
