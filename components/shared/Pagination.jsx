@@ -13,7 +13,7 @@ import {
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const generatePageNumbers = () => {
     const pageNumbers = [];
-    const visiblePages = 5; 
+    const visiblePages = 3; 
 
     if (totalPages <= visiblePages) {
       for (let i = 1; i <= totalPages; i++) {
@@ -42,11 +42,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <ShadCNPagination className="flex justify-center mt-6">
-      <PaginationContent className="flex space-x-2">
+      <PaginationContent className="flex md:space-x-2 space-x-0 ">
         <PaginationItem>
           <PaginationPrevious
             href="#"
-            className="px-3 py-2 gradient-black text-[#f5f5f5] rounded hover:bg-gray-500"
+            className="px-1 py-2 gradient-black text-[#f5f5f5] rounded hover:bg-gray-500"
             onClick={(e) => {
               e.preventDefault();
               if (currentPage > 1) onPageChange(currentPage - 1);
