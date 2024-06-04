@@ -25,7 +25,7 @@ const Carousel = () => {
   useGSAP(() => {
     gsap.to("#slider", {
       transform: `translateX(${-100 * photoId}%)`,
-      duration: 2.5,
+      duration: 2,
       ease: "power2.inOut",
     });
   }, [photoId]);
@@ -119,10 +119,10 @@ const Carousel = () => {
   const handleLoaded = (i, e) => setLoaded((prev) => [...prev, e]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center  overflow-x-hidden">
       {carouselItems.map((item, i) => (
-        <div id="slider" className="sm:pr-20 pr-10" key={i}>
-          <div className="photo-carousel_container">
+        <div id="slider" className="sm:pr-20 pr-10 " key={i}>
+          <div className="photo-carousel_container ">
             <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
               <Image 
                 src={item.imgurl}
@@ -138,20 +138,7 @@ const Carousel = () => {
           </div>
         </div>
       ))}
-      <div className="flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
-          {photoRef.current.map((_, i) => (
-            <span
-              key={i}
-              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
-              ref={(el) => (photoDivRef.current[i] = el)}
-            >
-              <span
-                className="absolute h-full w-full rounded-full"
-                ref={(el) => (photoSpanRef.current[i] = el)}
-              />
-            </span>
-          ))}
-        </div>
+    
     </div>
   );
 };

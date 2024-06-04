@@ -16,7 +16,7 @@ export default function Home() {
             />
             <h1 className="h1-semibold text-[#f5f5f5]">Wishlists</h1>
           </div>
-          <div className="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-7">
+          <div className="wrapper grid grid-cols-2 md:grid-cols-3 gap-5 mt-7">
             <Card />
           </div>
         </div>

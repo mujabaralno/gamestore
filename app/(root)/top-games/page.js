@@ -17,7 +17,6 @@ export default function Home() {
     setGames(data);
     setLoading(false);
   };
-  console.log(games);
 
   useEffect(() => {
     handleSubmit();
@@ -51,7 +50,7 @@ export default function Home() {
       </div>: (
         null
       )}
-      <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-3 2xl:gap-0 mt-7">
+      <div className="w-full grid grid-cols-2 gap-5 md:grid-cols-3 2xl:gap-0 mt-7">
         {games.slice(2, 3).map((game, i) => {
           return (
             <Link key={i} href={`/games/${game.id}`}>

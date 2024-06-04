@@ -75,7 +75,7 @@ export default function Home() {
       </div>: (
         null
       )}
-      <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-3 2xl:gap-0 mt-10">
+      <div className="w-full grid grid-cols-2 gap-5 md:grid-cols-3 2xl:gap-0 mt-10">
         {currentGames.map((game, i) => (
           <Link key={i} href={`/games/${game.id}`}>
             <Card

@@ -33,7 +33,7 @@ const Colection = () => {
     );
   }
   return (
-    <div className="w-full grid grid-cols-1 gap-5 md:grid-cols-3 2xl:gap-0">
+    <div className="w-full grid grid-cols-2 gap-5 md:grid-cols-3 2xl:gap-0">
       {games.slice(0, 12).map((game, i) => {
         return (
           <Link key={i} href={`/games/${game.id}`}>
